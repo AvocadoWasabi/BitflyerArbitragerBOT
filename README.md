@@ -75,8 +75,6 @@ spot trading : 20,000 yen
 
 futures : 38,000 yen(18,000 for deposit)
 
-20,000 yen x 2side(spot trading, futures) used for trading.
-
 0.003 BTC for commission
 
 # Installation
