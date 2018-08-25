@@ -6,7 +6,7 @@ Trade target is price gaps between Bitcoin spot trading and futures.
 # What's Arbitrage Trade?
 Trade method using price gaps of two or + markets with sililar financial instrument.
 
-Example:
+## Example
 
 Market A 100yen/BTC, Market B 110yen/BTC
 
@@ -20,10 +20,12 @@ This method said to be low risk and low return.
 
 # Screenshot
 screenshot shows...
+
 1. logging time
 2. Trade Pair `[spot_trading][futures]:size`
 3. besk_ask, besk bid, each size
 4. showing expectable profit(normal is minus value = no arbitrage oppotunity)
+
 ![screen](https://github.com/AvocadoWasabi/BitflyerArbitragerBOT/blob/ReadmeImages/images/screen.PNG)
 
 
@@ -42,6 +44,7 @@ Adjust PC time accurately for avoiding time gap with Bitflyer server time.
 
 ## Libraries
 install `requests` and `six`
+
 ```
 pip install requests
 pip install six
@@ -49,21 +52,31 @@ pip install six
 
 ## API KEY and SECRET
 Get Bitflyer API KEY and SECRET for auto-trading.
+
 Set API Authorization below.
+
 **KEEP API KEYS AND SECRET IN SAFE PLACE**
+
 ![API Authorization](https://github.com/AvocadoWasabi/BitflyerArbitragerBOT/blob/ReadmeImages/images/authorization_limitation.png)
 
 ## Account condition
 Prepare money for trade.
+
 Set levarage at **x1** for avoiding loss-cut.
+
 Money balance is X for spot trading, 1.8X for futures.
+
 Get extra BTC for commission.
 
-Example:
+### Example
 max trade 60,000 yen
+
 spot trading : 20,000 yen
+
 futures : 38,000 yen(18,000 for deposit)
+
 20,000 yen x 2side(spot trading, futures) used for trading.
+
 0.003 BTC for commission
 
 # Installation
@@ -77,6 +90,7 @@ futures : 38,000 yen(18,000 for deposit)
 
 # Settings
 List of `config.json` setting
+
 |items|descriptions|
 |:----|:-----------|
 |demo_mode|`true`:virtual trade, `false`:real trade|
@@ -106,24 +120,29 @@ List of `config.json` setting
 # Architecture
 ## modules
 Program modules are made along multiprocessing.
+
 ![Architecture](https://github.com/AvocadoWasabi/BitflyerArbitragerBOT/blob/ReadmeImages/images/architecture.png)
 
 ## Arbitrage Oppotunity Detail
 `(Futures best bid) - (Spot trading best ask) - 2 x (commission rate) - swap point = expect profit`
+
 If `expect profit > expect_profit_threshold`, the program regards it as an arbitrade oppotunity.
 
 This oppotunity often occures when BTC price goes down rapidly, or when maturity time comes close.
 
 ## Boot and Reboot
 `config.json` is read when boot and reboot.
+
 Dynamic setting change isn't supported.
 
 ## Log output
 `yyyymmdd.log` for level-info log.
+
 `yyyymmdd_high_level` for level-warning log for tracing trade log.
 
 ## product_code
 Product_code is the identifier of each Bitflyer board.
+
 ex. BTC_JPY : spot_trading, BTCJPY24AUG2018: Futures with maturity date(August 24)
 
 # Inspirations
