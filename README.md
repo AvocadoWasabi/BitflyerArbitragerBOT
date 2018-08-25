@@ -69,7 +69,7 @@ Money balance is X for spot trading, 1.8X for futures.
 Get extra BTC for commission.
 
 ### Example
-max trade 60,000 yen
+max position 20,000 yen for each side.
 
 spot trading : 20,000 yen
 
