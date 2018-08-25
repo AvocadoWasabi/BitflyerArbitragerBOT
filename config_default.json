@@ -1,0 +1,35 @@
+{
+    "demo_mode": false,
+    "demo_trade_interval": 3,
+    "message_language": "EN",
+
+    "api_key" : "",
+    "api_secret" : "",
+
+    "swap_point_rate" : 0.0004,
+
+    "position_value" : 0.010,
+    "max_position_value" : 0.020,
+    "expect_profit_thleshold" : 1,
+    "close_pair_before_sq" : false,
+    "closing_margin_time" : 10,
+
+    "maturity_time" : "11:00:00",
+    "maturity_time_margin" : 180,
+    "check_board_info_interval" : 60,
+    "itayose_time" : "12:00:00",
+    "sq_time" : "12:05:00",
+    "reboot_time" : "13:00:00",
+
+    "std_stream_logging_interval" : 60,
+    "arbitrage_loop_cooling_time": 1,
+
+    "websocket_retry_after" : 60,
+
+    "arbitrage_debug_mode": false,
+    "maturity_debug_mode": false,
+    "debug_maturity_start": "2018/08/25 12:27:00",
+    "debug_itayose_time": "2018/08/25 12:30:00",
+    "debug_reboot_time": "2018/08/25 12:35:00"
+    
+}
