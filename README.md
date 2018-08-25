@@ -1,12 +1,17 @@
 # BitflyerArbitragerBOT
 This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/ja-jp/), Bitcoin Exchange Point.
+
 Trade target is price gaps between Bitcoin spot trading and futures.
 
 # What's Arbitrage Trade?
 Trade method using price gaps of two or + markets with sililar financial instrument.
+
 Example:
+
 Market A 100yen/BTC, Market B 110yen/BTC
+
 If we sell 1BTC at Market B and BUY 1BTC at Market A, we can earn 110-100=10yen.
+
 This profit is ensured with reason that these two market treat same financial instrument and price will be same after a while.
 
 Spot trading and Futures will be the same price at SQ time, so this fact enables arbitrage trade.
