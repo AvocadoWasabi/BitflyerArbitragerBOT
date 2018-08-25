@@ -80,15 +80,3 @@ class Scheduler(object):
                 else:
                     pass
         return flg
-    
-    def is_enough_board_checking_interval(self):
-        now = datetime.now()
-
-        if self.latest_board_checking is None:
-            self.latest_board_checking = now
-            return True
-        if self.latest_board_checking <= now and now < self.latest_board_checking + timedelta(seconds= self.config.config_data['check_board_info_interval']):
-            return False
-        else:
-            self.latest_board_checking = now
-            return True
