@@ -1,0 +1,29 @@
+# License apartment
+
+"Bitflyer spot_trading-futures arbitrager" contains 3 part of programs.
+
+1. Arbitrager(main program)
+  file : LICENSE_ARBITRAGER
+  MIT License
+
+2. pybitflyer(bitflyer API calling) 0.1.9 modified
+	file : LICENSE_PYBITFLYER
+  MIT License
+  
+3. websocket-client 0.47.0 modified
+	file : LISENCE_WEBSOCKET_CLIENT
+  LGPL license 2.1
+
+Pybitflyer and websocket-client obey each original license.
+Arbitrager part has own license.
+Each License notice is included as files.
+Please pay attention to the 3 lisenses when you distritube this programs.
+
+#copyright notice
+Arbitrager (c)2018AvocadoWasabi, avocado.wasabi.syoyu@gmail.com
+
+pybitflyer (c)2016 yag_ays, yanagi.ayase@gmail.com
+Original : https://github.com/yagays/pybitflyer 
+
+websocket-client (C)2010 Hiroki Ohtani(liris)
+Original : https://github.com/websocket-client/websocket-client
