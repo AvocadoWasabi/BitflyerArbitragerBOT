@@ -122,7 +122,7 @@ Program modules are made along multiprocessing.
 ![Architecture](https://github.com/AvocadoWasabi/BitflyerArbitragerBOT/blob/ReadmeImages/images/architecture.png)
 
 ## Arbitrage Oppotunity Detail
-`(Futures best bid) - (Spot trading best ask) - 2 x (commission rate) - swap point = expect profit`
+`(Futures best bid) - (Spot trading best ask) - 2 x (commission) - swap point = expect profit`
 
 If `expect profit > expect_profit_threshold`, the program regards it as an arbitrade oppotunity.
 
