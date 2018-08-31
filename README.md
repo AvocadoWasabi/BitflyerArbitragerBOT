@@ -93,6 +93,7 @@ futures : 38,000 yen(18,000 for deposit)
 
 # Settings
 List of `config.json` setting
+
 **adjust `maturity_time, itayose_time, sq_time, reboot_time` to your time_zone,
 default time is for Tokyo,Japan (UTC+9)**.
 
