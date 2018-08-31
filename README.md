@@ -1,5 +1,5 @@
 # BitflyerArbitragerBOT
-This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/ja-jp/), Bitcoin Exchange Point.
+This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/en-jp/), Bitcoin Exchange Point.
 
 Trade target is price gaps between Bitcoin spot trading and futures.
 
