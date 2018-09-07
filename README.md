@@ -1,22 +1,27 @@
 # BitflyerArbitragerBOT
-This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/ja-jp/), Bitcoin Exchange Point.
+This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/en-jp/), Bitcoin Exchange Point.
 
 Trade target is price gaps between Bitcoin spot trading and futures.
+
+**This program was recently published, please report bugs**
 
 # What's Arbitrage Trade?
 Trade method using price gaps of two or + markets with sililar financial instrument.
 
 ## Example
 
-Market A 100yen/BTC, Market B 110yen/BTC
+Market A 110yen/BTC, Market B 100yen/BTC
 
-If we sell 1BTC at Market B and BUY 1BTC at Market A, we can earn 110-100=10yen.
+If we BUY 1BTC at Market B and SELL 1BTC at Market A, we can earn 110-100=10yen.
 
 This profit is ensured with reason that these two market treat same financial instrument and price will be same after a while.
 
 Spot trading and Futures will be the same price at SQ time, so this fact enables arbitrage trade.
 
-This method said to be low risk and low return.
+This method said to be low risk and low return (only theoretically, not practically).
+
+![Trade Example](https://github.com/AvocadoWasabi/BitflyerArbitragerBOT/blob/ReadmeImages/images/ArbitrageTradeExample.png)
+
 
 # Screenshot
 screenshot shows...
@@ -89,6 +94,9 @@ futures : 38,000 yen(18,000 for deposit)
 # Settings
 List of `config.json` setting
 
+**adjust `maturity_time, itayose_time, sq_time, reboot_time` to your time_zone,
+default time is for Tokyo,Japan (UTC+9)**.
+
 |items|descriptions|
 |:----|:-----------|
 |demo_mode|`true`:virtual trade, `false`:real trade|
@@ -122,7 +130,7 @@ Program modules are made along multiprocessing.
 ![Architecture](https://github.com/AvocadoWasabi/BitflyerArbitragerBOT/blob/ReadmeImages/images/architecture.png)
 
 ## Arbitrage Oppotunity Detail
-`(Futures best bid) - (Spot trading best ask) - 2 x (commission rate) - swap point = expect profit`
+`(Futures best bid) - (Spot trading best ask) - 2 x (commission) - swap point = expect profit`
 
 If `expect profit > expect_profit_threshold`, the program regards it as an arbitrade oppotunity.
 
