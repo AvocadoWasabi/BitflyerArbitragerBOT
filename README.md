@@ -85,7 +85,7 @@ futures : 38,000 yen(18,000 for deposit)
 # Installation
 
 1. Install Python 3.6.4
-2. Fork or git clone this repository.
+2. git clone this repository.
 3. Get API KEY and SECRET. Prepare money on your account.
 4. Rename `config_default.json` to `config.json`
 5. Set items of `config.json`
