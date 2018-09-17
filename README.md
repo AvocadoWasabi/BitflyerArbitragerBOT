@@ -1,3 +1,6 @@
+# 日本語の説明
+[Qiita記事](https://qiita.com/Avocado/items/3cbacbb0b8d6c70d5efb)をごらんください。
+
 # BitflyerArbitragerBOT
 This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/en-jp/), Bitcoin Exchange Point.
 
