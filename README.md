@@ -1,4 +1,4 @@
-# 日本語の説明
+# 日本語の説明(For Japanese description)
 [Qiita記事](https://qiita.com/Avocado/items/3cbacbb0b8d6c70d5efb)をごらんください。
 
 # BitflyerArbitragerBOT
