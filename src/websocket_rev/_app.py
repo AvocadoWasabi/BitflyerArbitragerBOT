@@ -136,7 +136,8 @@ class WebSocketApp(object):
         self.last_pong_tm = 0
         self.subprotocols = subprotocols
 
-        #例外で終了したときこれを外部から参照すれば、そうとわかる
+        #modified point
+        #When Keyboard Interrupt exception occues, this variable indicates the situation
         self.is_keyboard_interrupt = False
 
     def send(self, data, opcode=ABNF.OPCODE_TEXT):
@@ -250,6 +251,7 @@ class WebSocketApp(object):
             def read():
                 if not self.keep_running:
                     #teardown()
+                    #modified point, raise exception instead of teardown()
                     raise WebSocketDisconnectedException
                 op_code, frame = self.sock.recv_data_frame(True)
                 if op_code == ABNF.OPCODE_CLOSE:
@@ -279,6 +281,8 @@ class WebSocketApp(object):
                 return True
 
             dispatcher.read(self.sock.sock, read)
+
+        #modified point, add KeyboardInterrupt Exception
         except KeyboardInterrupt as e:
             self.is_keyboard_interrupt = True 
             self._callback(self.on_error, e)
