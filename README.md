@@ -6,8 +6,6 @@ This program is an auto-arbitrage trade for [Bitflyer](https://bitflyer.com/en-j
 
 Trade target is price gaps between Bitcoin spot trading and futures.
 
-**This program was recently published, please report bugs**
-
 # What's Arbitrage Trade?
 Trade method using price gaps of two or + markets with sililar financial instrument.
 
